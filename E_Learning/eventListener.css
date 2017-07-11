@@ -1,0 +1,12 @@
+
+
+#sprite1{
+display: block;
+    position: absolute;
+width:110px; 
+height:20px; 
+top: 0;
+left: 0;
+padding: 5%;
+background-color: yellow;
+}
