@@ -9,9 +9,19 @@
 <head>
     <meta charset="utf-8" />
     <script type="text/javascript">
-        function doIt() {
+        function doIt(){
+            var jsExc = document.getElementById("input").value;
+            try {
+                console.log("coco")
+                eval(jsExc);
+            } catch(error) {
+                 console.log(co)
+                var txt = "sorry, but that caused error '" + error.message + "'\n\nClick OK to continue.";
+                alert(txt);
+               
 
             }
+
 
         }
     </script>
@@ -20,17 +30,19 @@
 <body>
 
 
-    Enter javascript command:</br></br> <textarea rows="20" cols="50" id="input1"> </textarea>
-    </br>
-    </br>
- <input type="button" onclick="doIt()" value="execute">
-    </br>
-    </br>
-   output window (use ID "output"): 
-   <div "id ="output1" style="height: 125px; width: 425px; border: 1px solid;"> </div>
- 
-   
-   
+    Enter javascript command:<br/><br/>
+    <textarea rows="20" cols="50" id="input"> </textarea>
+    <br/>
+    <br/>
+    <input type="button" onclick="doIt()" value="Execute" />
+    <br/>
+    <br/> output window (use ID "output"):
+    <div id="output" style="height: 125px; width:425px; border: 1px solid "> </div>
+
+
+
+
+
 
 
 
