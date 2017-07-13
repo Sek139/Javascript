@@ -1,0 +1,48 @@
+<html>
+<title>
+    JavaScript
+</title>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $( function() {
+
+            var json_string = '{ \
+"prop1" : false, \
+"prop2" : null, \
+"prop3" : 5, \
+"prop4" : "a message" \
+}';
+
+            var JavaScript_object = {
+
+                prop1: false,
+                prop2: null,
+                prop3: 5,
+                prop4: "a message"
+
+            };
+            console.log('json string: ' + (typeof json_string));
+            console.log('javascript object' + (typeof JavaScript_object));
+
+            console.log('json string: ' + json_string.prop4);
+            console.log('javascript string' + JavaScript_object.prop4);
+
+
+            console.log(JSON.parse(json_string));
+            console.log(JSON.stringify(JavaScript_object));
+
+        });
+    </script>
+</head>
+
+<body>
+
+
+
+
+</body>
+
+</html>
