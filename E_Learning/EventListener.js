@@ -26,6 +26,7 @@ document.addEventListener('keydown', function(event) {
         y += 5;
         yVal = x + "px";
         sprite.style.top = yVal;
+        
     }
 
 document.getElementById("output").innerHTML = "x: " + xVal + "Y: " + yVal;
