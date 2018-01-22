@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Drage and drop function javascript  </title>
+        <script>
+        function allowDropping(event){
+            event.preventDefault();
+        }
+
+        function dragging(event){
+            event.dataTransfer.setData("text", event.target.id);
+        }
+        
+        function dropping(event){
+event.preventDefault();
+var info = event.dataTransfer.getData("text");
+event.target.appendChild(document.getElementById(info));
+
+document.location.reload();
+alert("Tes Couilles! Pourquoi m'as tu deplacé");
+        }
+        
+        </script>
+    </head>
+
+<div id ="dropFrame" ondrop="dropping(event)" ondragover="allowDropping(event)" style="height: 250px; width: 325px; background-color: #906"></div>
+<img id="sunsetpic" src="C:\Users\sekouass\Documents\Sunset.jpeg" draggable="true" ondragstart="dragging(event)" style="width: 325 px; height: 250px"/>
+
+</html>
